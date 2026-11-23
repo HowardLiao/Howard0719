@@ -1,0 +1,16 @@
+{
+  "name": "Howard0719.tw｜嚴選冷鏈生鮮商城",
+  "short_name": "Howard0719",
+  "description": "Howard0719.tw 嚴選把關。台灣在地與進口冷藏、冷凍海鮮肉品，全程低溫冷鏈直送。",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ECE9E2",
+  "theme_color": "#181818",
+  "icons": [
+    {
+      "src": "./assets/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

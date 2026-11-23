@@ -1,0 +1,2190 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Howard0719.tw｜Howard0719 嚴選冷鏈生鮮商城</title>
+  <meta name="description" content="Howard0719.tw 嚴選把關。台灣在地與進口冷藏、冷凍海鮮肉品，全程低溫冷鏈直送，滿2000免運，把產地的新鮮鎖進您家餐桌。" />
+  <meta property="og:title" content="Howard0719.tw｜Howard0719 嚴選冷鏈生鮮商城" />
+  <meta property="og:description" content="台灣在地與進口頂級海鮮肉品、暖心鍋底、即食美味，全程低溫冷鏈直送，滿2000免運。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://howard0719.tw/" />
+  <meta property="og:image" content="./assets/images/banner_crab.jpg" />
+  <meta name="theme-color" content="#181818" />
+  <link rel="icon" type="image/svg+xml" href="./assets/logo.svg" />
+  <link rel="manifest" href="./manifest.json" />
+  <style>
+    :root {
+      --bg-page: #E9E6DF;
+      --bg-header: #F7F5F0;
+      --bg-card: #FFFFFF;
+      --bg-dark: #1A1A1A;
+      --bg-dark-2: #242424;
+      --bg-subtle: #F3F1EC;
+      --text-primary: #181818;
+      --text-secondary: #5C5953;
+      --text-muted: #8A867E;
+      --text-inverse: #F7F5F0;
+      --accent-gold: #C8A55C;
+      --accent-gold-soft: #E4C987;
+      --accent-price: #A63A24;
+      --border-light: #E4E0D8;
+      --border-card: #EAE6DE;
+      --radius-lg: 16px;
+      --radius-md: 12px;
+      --radius-sm: 8px;
+      --radius-pill: 9999px;
+      --shadow-card: 0 2px 10px rgba(24, 24, 24, 0.04);
+      --shadow-hover: 0 8px 24px rgba(24, 24, 24, 0.09);
+      --container-max: 1220px;
+      --font-sans: -apple-system, BlinkMacSystemFont, "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", "Helvetica Neue", Arial, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--font-sans);
+      background: var(--bg-page);
+      color: var(--text-primary);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; padding: 0; color: inherit; }
+    img { display: block; max-width: 100%; }
+
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ── Top Announcement Bar ── */
+    .top-bar {
+      background: var(--bg-dark);
+      color: #DDD9D0;
+      font-size: 12.5px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .top-bar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      min-height: 36px;
+      padding: 6px 0;
+    }
+    .top-bar-msg {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      letter-spacing: 0.01em;
+    }
+    .top-bar-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-shrink: 0;
+    }
+    .top-bar-links button, .top-bar-links a {
+      font-size: 12.5px;
+      color: #E5E1D8;
+      transition: color 0.15s;
+    }
+    .top-bar-links button:hover, .top-bar-links a:hover { color: #FFFFFF; }
+    .top-bar-links .line-link { color: var(--accent-gold-soft); font-weight: 600; }
+
+    /* ── Main Header ── */
+    .site-header {
+      background: var(--bg-header);
+      border-bottom: 1px solid var(--border-light);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 14px 0;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+    .brand-logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: contain;
+      flex-shrink: 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    }
+    .brand-text { display: flex; flex-direction: column; }
+    .brand-title {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      line-height: 1.1;
+      color: var(--text-primary);
+    }
+    .brand-title span { color: var(--accent-price); }
+    .brand-sub {
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      color: var(--text-secondary);
+      margin-top: 3px;
+    }
+
+    /* Search Bar */
+    .search-wrap {
+      flex: 1;
+      max-width: 520px;
+      position: relative;
+    }
+    .search-form {
+      display: flex;
+      align-items: center;
+      background: #FFFFFF;
+      border: 1.5px solid #2A2A2A;
+      border-radius: var(--radius-pill);
+      overflow: hidden;
+      height: 44px;
+      transition: box-shadow 0.2s;
+    }
+    .search-form:focus-within {
+      box-shadow: 0 0 0 3px rgba(200, 165, 92, 0.25);
+    }
+    .search-input {
+      flex: 1;
+      border: none;
+      outline: none;
+      padding: 0 18px;
+      font-size: 14px;
+      background: transparent;
+      color: var(--text-primary);
+      min-width: 0;
+    }
+    .search-input::placeholder { color: #9A958C; }
+    .search-clear {
+      display: none;
+      padding: 0 8px;
+      color: #888;
+      font-size: 16px;
+    }
+    .search-clear.visible { display: inline-flex; align-items: center; }
+    .search-btn {
+      height: 100%;
+      padding: 0 24px;
+      background: var(--bg-dark);
+      color: #FFFFFF;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      transition: background 0.15s;
+      flex-shrink: 0;
+    }
+    .search-btn:hover { background: #333333; }
+
+    /* Search Suggest Dropdown */
+    .search-dropdown {
+      display: none;
+      position: absolute;
+      top: calc(100% + 6px);
+      left: 0;
+      right: 0;
+      background: #FFFFFF;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.14);
+      z-index: 90;
+      max-height: 360px;
+      overflow-y: auto;
+    }
+    .search-dropdown.open { display: block; }
+    .search-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 14px;
+      border-bottom: 1px solid #F2EFEA;
+      cursor: pointer;
+      transition: background 0.12s;
+    }
+    .search-item:last-child { border-bottom: none; }
+    .search-item:hover { background: #FAF8F4; }
+    .search-item img {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+    .search-item-info { flex: 1; min-width: 0; }
+    .search-item-name {
+      font-size: 13.5px;
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .search-item-meta { font-size: 12px; color: var(--text-muted); }
+    .search-item-price { font-size: 14px; font-weight: 700; color: var(--accent-price); flex-shrink: 0; }
+
+    /* Header Actions */
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+    .btn-login {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      height: 44px;
+      padding: 0 20px;
+      background: var(--bg-dark);
+      color: #FFFFFF;
+      border-radius: var(--radius-md);
+      font-size: 14px;
+      font-weight: 600;
+      transition: background 0.15s;
+    }
+    .btn-login:hover { background: #333; }
+    .btn-cart {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 46px;
+      height: 44px;
+      background: #FFFFFF;
+      border: 1.5px solid var(--border-light);
+      border-radius: var(--radius-md);
+      color: var(--text-primary);
+      transition: border-color 0.15s, background 0.15s;
+    }
+    .btn-cart:hover { border-color: #181818; background: #FAF8F4; }
+    .cart-badge {
+      position: absolute;
+      top: -6px;
+      right: -6px;
+      min-width: 20px;
+      height: 20px;
+      padding: 0 5px;
+      border-radius: var(--radius-pill);
+      background: var(--accent-price);
+      color: #FFFFFF;
+      font-size: 11px;
+      font-weight: 700;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 6px rgba(166,58,36,0.35);
+    }
+    .cart-badge.visible { display: inline-flex; }
+
+    /* ── Sticky Category Navigation Bar ── */
+    .cat-nav {
+      position: sticky;
+      top: 0;
+      z-index: 60;
+      background: var(--bg-dark);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+    }
+    .cat-nav-inner {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    .cat-nav-inner::-webkit-scrollbar { display: none; }
+    .cat-tab {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 13px 16px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #E5E1D8;
+      white-space: nowrap;
+      border-bottom: 2px solid transparent;
+      transition: color 0.15s, background 0.15s, border-color 0.15s;
+      flex-shrink: 0;
+    }
+    .cat-tab:hover { color: #FFFFFF; background: rgba(255,255,255,0.06); }
+    .cat-tab.active {
+      color: var(--accent-gold-soft);
+      border-bottom-color: var(--accent-gold);
+      background: rgba(255,255,255,0.08);
+    }
+
+    /* ── Main Content Wrapper ── */
+    main {
+      padding: 22px 0 48px;
+    }
+
+    /* ── Hero Section (3 Banners + 本月精選 Dark Card) ── */
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      gap: 14px;
+      margin-bottom: 22px;
+    }
+    .hero-banners-wrap {
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-banners {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      height: 100%;
+    }
+    .hero-banner-card {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      aspect-ratio: 3 / 4;
+      background: #222;
+      box-shadow: var(--shadow-card);
+      cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .hero-banner-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+    }
+    .hero-banner-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .hero-banner-card:hover img { transform: scale(1.03); }
+    .hero-banner-tag {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background: rgba(24,24,24,0.82);
+      color: var(--accent-gold-soft);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(200,165,92,0.45);
+    }
+
+    /* 本月精選 Card */
+    .featured-box {
+      background: #141414;
+      border-radius: var(--radius-lg);
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid rgba(200, 165, 92, 0.25);
+      box-shadow: var(--shadow-card);
+    }
+    .featured-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(200, 165, 92, 0.28);
+    }
+    .featured-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--accent-gold-soft);
+      letter-spacing: 0.06em;
+      margin: 0;
+    }
+    .featured-sub {
+      font-size: 11px;
+      color: #9A9386;
+      letter-spacing: 0.08em;
+    }
+    .featured-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      flex: 1;
+    }
+    .featured-tile {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #222;
+      aspect-ratio: 3 / 4;
+      cursor: pointer;
+    }
+    .featured-tile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .featured-tile:hover img { transform: scale(1.06); }
+    .featured-tile-label {
+      position: absolute;
+      inset: auto 0 0 0;
+      padding: 20px 8px 6px;
+      background: linear-gradient(transparent, rgba(0,0,0,0.82));
+      color: #FFF;
+      font-size: 11.5px;
+      font-weight: 600;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* ── White Rounded Section Container ── */
+    .store-section {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      padding: 22px 24px 26px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow-card);
+      border: 1px solid rgba(24,24,24,0.04);
+      scroll-margin-top: 64px;
+    }
+    .section-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+    .section-title-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+    .section-bar {
+      width: 4px;
+      height: 22px;
+      border-radius: 2px;
+      background: var(--accent-gold);
+      flex-shrink: 0;
+    }
+    .section-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-primary);
+      flex-shrink: 0;
+    }
+    .section-title {
+      font-size: 20px;
+      font-weight: 800;
+      margin: 0;
+      letter-spacing: 0.02em;
+      color: var(--text-primary);
+    }
+    .section-subtitle {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-left: 4px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .section-controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+    .btn-more {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      padding: 4px 8px;
+      border-radius: 6px;
+      transition: color 0.15s, background 0.15s;
+    }
+    .btn-more:hover { color: var(--text-primary); background: var(--bg-subtle); }
+    .carousel-arrow {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      border: 1px solid var(--border-light);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-secondary);
+      background: #FFFFFF;
+      transition: all 0.15s;
+    }
+    .carousel-arrow:hover { border-color: #181818; color: #181818; background: #FAF8F4; }
+
+    /* ── Product Grids & Rank Carousel ── */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+    }
+    .rank-track {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: calc((100% - 56px) / 5);
+      gap: 14px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      padding-bottom: 4px;
+    }
+    .rank-track::-webkit-scrollbar { display: none; }
+
+    /* Product Card */
+    .product-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      background: #FFFFFF;
+      border: 1px solid var(--border-card);
+      border-radius: 14px;
+      padding: 10px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      scroll-snap-align: start;
+      cursor: pointer;
+    }
+    .product-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-hover);
+      border-color: #D7D1C5;
+    }
+    .product-thumb {
+      position: relative;
+      aspect-ratio: 1 / 1;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #F4F2ED;
+      margin-bottom: 10px;
+    }
+    .product-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.35s ease;
+    }
+    .product-card:hover .product-thumb img { transform: scale(1.04); }
+
+    /* Rank Badge */
+    .rank-badge {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      z-index: 2;
+      width: 26px;
+      height: 26px;
+      border-radius: 7px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 800;
+      color: #FFFFFF;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.22);
+    }
+    .rank-1 { background: linear-gradient(135deg, #D9B15F, #A67E2E); }
+    .rank-2 { background: linear-gradient(135deg, #9CA3AF, #6B7280); }
+    .rank-3 { background: linear-gradient(135deg, #B87344, #8A4F27); }
+    .rank-other { background: #1A1A1A; }
+
+    .product-origin {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+    .product-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.4;
+      margin: 0 0 12px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      min-height: 39px;
+    }
+    .product-bottom {
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .product-price {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--accent-price);
+      letter-spacing: -0.01em;
+    }
+    .btn-quick-add {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: var(--bg-dark);
+      color: #FFFFFF;
+      font-size: 18px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.15s, background 0.15s;
+      flex-shrink: 0;
+    }
+    .btn-quick-add:hover { background: #3A3A3A; transform: scale(1.06); }
+    .btn-quick-add:active { transform: scale(0.94); }
+
+    /* ── Filter / Search Results View ── */
+    .filter-view {
+      display: none;
+    }
+    .filter-view.active { display: block; }
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 18px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .filter-sort {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .sort-pill {
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      font-size: 13px;
+      font-weight: 600;
+      border: 1px solid var(--border-light);
+      background: #FFFFFF;
+      color: var(--text-secondary);
+      transition: all 0.15s;
+    }
+    .sort-pill.active, .sort-pill:hover {
+      background: var(--bg-dark);
+      color: #FFFFFF;
+      border-color: var(--bg-dark);
+    }
+    .btn-back-home {
+      padding: 7px 14px;
+      border-radius: 8px;
+      background: var(--bg-subtle);
+      color: var(--text-primary);
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .btn-back-home:hover { background: #E4E0D8; }
+
+    /* ── Footer ── */
+    .site-footer {
+      background: #1C1C1C;
+      color: #CFCBC2;
+      padding: 44px 0 28px;
+      margin-top: 24px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+      gap: 32px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .footer-brand-logo {
+      width: 62px;
+      height: 62px;
+      margin-bottom: 14px;
+    }
+    .footer-desc {
+      font-size: 13.5px;
+      line-height: 1.75;
+      color: #B4B0A6;
+      max-width: 280px;
+      margin: 0;
+    }
+    .footer-col h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin: 0 0 14px;
+    }
+    .footer-links {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .footer-links button, .footer-links a, .footer-contact-row {
+      font-size: 13.5px;
+      color: #BDB9AF;
+      text-align: left;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.15s;
+    }
+    .footer-links button:hover, .footer-links a:hover { color: var(--accent-gold-soft); }
+    .footer-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding-top: 22px;
+      font-size: 12.5px;
+      color: #8E8A81;
+    }
+    .payment-badges {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .pay-badge {
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(255,255,255,0.06);
+      color: #E6E2D8;
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── Slide-Over Cart Drawer ── */
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.52);
+      z-index: 120;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.22s ease;
+    }
+    .overlay.open { opacity: 1; pointer-events: auto; }
+
+    .cart-drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      max-width: 430px;
+      background: #FFFFFF;
+      z-index: 130;
+      display: flex;
+      flex-direction: column;
+      transform: translateX(100%);
+      transition: transform 0.26s cubic-bezier(0.22, 1, 0.36, 1);
+      box-shadow: -8px 0 32px rgba(0,0,0,0.18);
+    }
+    .cart-drawer.open { transform: translateX(0); }
+    .drawer-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 20px;
+      border-bottom: 1px solid var(--border-light);
+      background: var(--bg-header);
+    }
+    .drawer-head h2 { margin: 0; font-size: 18px; font-weight: 800; }
+    .btn-close {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      color: var(--text-secondary);
+    }
+    .btn-close:hover { background: rgba(0,0,0,0.07); color: #000; }
+
+    .shipping-bar {
+      padding: 12px 20px;
+      background: #FAF6ED;
+      border-bottom: 1px solid #EFE6D2;
+      font-size: 13px;
+    }
+    .shipping-progress-track {
+      height: 6px;
+      border-radius: 99px;
+      background: #E8DFCB;
+      margin-top: 7px;
+      overflow: hidden;
+    }
+    .shipping-progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #C8A55C, #A63A24);
+      border-radius: 99px;
+      transition: width 0.3s ease;
+    }
+    .drawer-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px 20px;
+    }
+    .cart-empty {
+      text-align: center;
+      padding: 56px 16px;
+      color: var(--text-muted);
+    }
+    .cart-item {
+      display: flex;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid #F0ECE4;
+    }
+    .cart-item img {
+      width: 68px;
+      height: 68px;
+      border-radius: 10px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+    .cart-item-body { flex: 1; min-width: 0; }
+    .cart-item-title {
+      font-size: 14px;
+      font-weight: 700;
+      margin: 0 0 4px;
+      line-height: 1.35;
+    }
+    .cart-item-price { font-size: 14px; font-weight: 700; color: var(--accent-price); }
+    .qty-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 8px;
+    }
+    .qty-stepper {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid var(--border-light);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .qty-stepper button {
+      width: 28px;
+      height: 28px;
+      font-size: 15px;
+      font-weight: 700;
+      background: #FAF8F4;
+    }
+    .qty-stepper button:hover { background: #EAE6DE; }
+    .qty-stepper span {
+      min-width: 30px;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .btn-remove { font-size: 12px; color: #9A958C; }
+    .btn-remove:hover { color: var(--accent-price); }
+
+    .drawer-foot {
+      padding: 16px 20px 20px;
+      border-top: 1px solid var(--border-light);
+      background: var(--bg-header);
+    }
+    .coupon-row {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .coupon-input {
+      flex: 1;
+      height: 36px;
+      padding: 0 12px;
+      border: 1px solid var(--border-light);
+      border-radius: 8px;
+      font-size: 13px;
+      background: #FFFFFF;
+    }
+    .btn-coupon {
+      padding: 0 14px;
+      height: 36px;
+      border-radius: 8px;
+      background: #2C2C2C;
+      color: #FFF;
+      font-size: 12.5px;
+      font-weight: 600;
+    }
+    .summary-line {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      margin-bottom: 6px;
+    }
+    .summary-total {
+      display: flex;
+      justify-content: space-between;
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--text-primary);
+      padding-top: 8px;
+      margin-top: 8px;
+      border-top: 1px dashed var(--border-light);
+    }
+    .summary-total .amt { color: var(--accent-price); }
+    .btn-primary-full {
+      width: 100%;
+      height: 46px;
+      margin-top: 14px;
+      border-radius: 10px;
+      background: var(--bg-dark);
+      color: #FFFFFF;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      transition: background 0.15s;
+    }
+    .btn-primary-full:hover { background: #333; }
+    .btn-primary-full:disabled { background: #B8B4AC; cursor: not-allowed; }
+
+    /* ── Center Modals (Product, Checkout, Order Lookup, Login, Guides) ── */
+    .modal-wrap {
+      position: fixed;
+      inset: 0;
+      z-index: 140;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+      background: rgba(0,0,0,0.56);
+    }
+    .modal-wrap.open { display: flex; }
+    .modal-box {
+      width: 100%;
+      max-width: 680px;
+      max-height: 90vh;
+      overflow-y: auto;
+      background: #FFFFFF;
+      border-radius: 18px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.28);
+      animation: modalIn 0.2s ease;
+    }
+    .modal-box.narrow { max-width: 480px; }
+    @keyframes modalIn {
+      from { opacity: 0; transform: translateY(10px) scale(0.98); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    .modal-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 22px;
+      border-bottom: 1px solid var(--border-light);
+      position: sticky;
+      top: 0;
+      background: #FFFFFF;
+      z-index: 2;
+    }
+    .modal-head h3 { margin: 0; font-size: 17px; font-weight: 800; }
+    .modal-body { padding: 22px; }
+
+    .product-modal-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      align-items: start;
+    }
+    .product-modal-img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 14px;
+      object-fit: cover;
+      background: #F4F2ED;
+    }
+    .pm-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+    .pm-tag {
+      font-size: 11.5px;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 6px;
+      background: var(--bg-subtle);
+      color: var(--text-secondary);
+    }
+    .pm-tag.cold { background: #EBF4FA; color: #1A5E8A; }
+    .pm-title { font-size: 20px; font-weight: 800; margin: 0 0 10px; line-height: 1.35; }
+    .pm-price { font-size: 26px; font-weight: 800; color: var(--accent-price); margin-bottom: 14px; }
+    .pm-specs {
+      background: #FAF8F4;
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+      line-height: 1.75;
+    }
+    .pm-actions { display: flex; gap: 10px; margin-top: 14px; }
+    .btn-outline {
+      flex: 1;
+      height: 44px;
+      border-radius: 10px;
+      border: 1.5px solid var(--bg-dark);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--bg-dark);
+      background: #FFF;
+    }
+    .btn-outline:hover { background: #FAF8F4; }
+    .btn-solid {
+      flex: 1;
+      height: 44px;
+      border-radius: 10px;
+      background: var(--bg-dark);
+      color: #FFF;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .btn-solid:hover { background: #333; }
+
+    /* Form Controls inside Modals */
+    .form-group { margin-bottom: 14px; }
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--text-primary);
+    }
+    .form-control {
+      width: 100%;
+      height: 42px;
+      padding: 0 12px;
+      border: 1px solid var(--border-light);
+      border-radius: 9px;
+      font-size: 14px;
+      font-family: inherit;
+      background: #FFFFFF;
+    }
+    .form-control:focus { outline: none; border-color: #181818; }
+    .pay-options { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .pay-opt {
+      padding: 10px 8px;
+      border: 1.5px solid var(--border-light);
+      border-radius: 9px;
+      font-size: 12.5px;
+      font-weight: 700;
+      text-align: center;
+      cursor: pointer;
+    }
+    .pay-opt.selected { border-color: #181818; background: #FAF6ED; color: #181818; }
+
+    /* Order Timeline */
+    .order-card {
+      background: #FAF8F4;
+      border: 1px solid var(--border-light);
+      border-radius: 12px;
+      padding: 16px;
+      margin-top: 14px;
+    }
+    .order-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+      margin-top: 12px;
+      text-align: center;
+      font-size: 11.5px;
+    }
+    .order-step {
+      padding: 7px 4px;
+      border-radius: 8px;
+      background: #ECE8DF;
+      color: #7D786E;
+      font-weight: 600;
+    }
+    .order-step.done { background: #181818; color: var(--accent-gold-soft); }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: #181818;
+      color: #FFFFFF;
+      padding: 11px 20px;
+      border-radius: var(--radius-pill);
+      font-size: 13.5px;
+      font-weight: 600;
+      z-index: 200;
+      opacity: 0;
+      pointer-events: none;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.26);
+      border: 1px solid rgba(200,165,92,0.45);
+      transition: opacity 0.2s, transform 0.2s;
+      white-space: nowrap;
+    }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+    /* ── Mobile Bottom Bar ── */
+    .mobile-dock {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 80;
+      background: #FFFFFF;
+      border-top: 1px solid var(--border-light);
+      padding: 6px 8px calc(6px + env(safe-area-inset-bottom));
+      grid-template-columns: repeat(4, 1fr);
+      box-shadow: 0 -2px 12px rgba(0,0,0,0.06);
+    }
+    .dock-btn {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      padding: 4px 0;
+    }
+    .dock-btn.active { color: var(--text-primary); font-weight: 800; }
+    .dock-badge {
+      position: absolute;
+      top: 0;
+      right: calc(50% - 20px);
+      min-width: 17px;
+      height: 17px;
+      padding: 0 4px;
+      border-radius: 99px;
+      background: var(--accent-price);
+      color: #FFF;
+      font-size: 10px;
+      font-weight: 700;
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+    .dock-badge.visible { display: inline-flex; }
+
+    /* ── Responsive Breakpoints ── */
+    @media (max-width: 1120px) {
+      .product-grid { grid-template-columns: repeat(4, 1fr); }
+      .rank-track { grid-auto-columns: calc((100% - 42px) / 4); }
+      .hero-grid { grid-template-columns: 1fr; }
+      .featured-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+    @media (max-width: 860px) {
+      .product-grid { grid-template-columns: repeat(3, 1fr); }
+      .rank-track { grid-auto-columns: calc((100% - 28px) / 3); }
+      .footer-grid { grid-template-columns: repeat(2, 1fr); }
+      .header-inner { flex-wrap: wrap; gap: 12px; }
+      .search-wrap { order: 3; max-width: 100%; flex: 1 1 100%; }
+    }
+    @media (max-width: 640px) {
+      body { padding-bottom: 66px; }
+      .container { padding: 0 14px; }
+      .top-bar-msg { font-size: 11.5px; }
+      .top-bar-links { gap: 10px; }
+      .brand-logo { width: 40px; height: 40px; }
+      .brand-title { font-size: 18px; }
+      .brand-sub { font-size: 9px; letter-spacing: 0.14em; }
+      .btn-login { display: none; }
+      .hero-banners {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        gap: 10px;
+      }
+      .hero-banners::-webkit-scrollbar { display: none; }
+      .hero-banner-card { flex: 0 0 76%; scroll-snap-align: start; }
+      .featured-grid { grid-template-columns: repeat(2, 1fr); }
+      .store-section { padding: 16px 14px 18px; border-radius: 14px; }
+      .section-title { font-size: 17px; }
+      .section-subtitle { display: none; }
+      .product-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .rank-track { grid-auto-columns: calc((100% - 10px) / 2); gap: 10px; }
+      .product-card { padding: 8px; }
+      .product-name { font-size: 13px; min-height: 36px; }
+      .product-price { font-size: 16px; }
+      .product-modal-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+      .mobile-dock { display: grid; }
+      .toast { bottom: 78px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-msg">商城冷凍商品 滿2000免運｜嚴選直播每週日二三 晚上18點開播｜客服專線：04-2639-0719 週一到週五 14:00-18:00</div>
+      <div class="top-bar-links">
+        <button type="button" onclick="openOrderLookup()">訂單查詢</button>
+        <button type="button" class="line-link" onclick="openGuide('line')">LINE 客服</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand" onclick="goHome()" role="button" tabindex="0" aria-label="回到 Howard0719.tw 首頁">
+        <img src="./assets/logo.svg" alt="Howard0719.tw" class="brand-logo" />
+        <div class="brand-text">
+          <div class="brand-title">Howard0719<span>.tw</span></div>
+          <div class="brand-sub">HOWARD0719 · PREMIUM COLD-CHAIN</div>
+        </div>
+      </div>
+
+      <div class="search-wrap">
+        <form class="search-form" onsubmit="handleSearchSubmit(event)">
+          <input id="searchInput" class="search-input" type="search" placeholder="搜尋 和牛、草蝦、花枝、羊肉爐、秋蟹…" autocomplete="off" aria-label="搜尋商品" />
+          <button type="button" id="searchClear" class="search-clear" onclick="clearSearch()" aria-label="清除搜尋">&times;</button>
+          <button type="submit" class="search-btn">搜尋</button>
+        </form>
+        <div id="searchDropdown" class="search-dropdown" role="listbox"></div>
+      </div>
+
+      <div class="header-actions">
+        <button type="button" id="headerLoginBtn" class="btn-login" onclick="openLoginModal()">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span id="headerLoginLabel">登入 / 註冊</span>
+        </button>
+        <button type="button" class="btn-cart" onclick="openCart()" aria-label="開啟購物車">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          <span id="cartBadge" class="cart-badge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sticky Category Navigation -->
+  <nav class="cat-nav" aria-label="商品分類導覽">
+    <div class="container cat-nav-inner" id="catNavBar"></div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Home View -->
+    <div id="homeView">
+      <!-- Hero Grid: 3 Banners + 本月精選 -->
+      <section class="hero-grid" aria-label="精選活動與本月推薦">
+        <div class="hero-banners">
+          <div class="hero-banner-card" onclick="openProductModal('nsmf4xw9c7')">
+            <img src="./assets/images/banner_crab.jpg" alt="2026秋蟹祭 五兩級鮮活公蟹" />
+          </div>
+          <div class="hero-banner-card" onclick="selectCategory('hotpot')">
+            <img src="./assets/images/banner_hotpot.jpg" alt="暖心火鍋開鍋囉，食材任選一鍋滿足" />
+          </div>
+          <div class="hero-banner-card" onclick="selectCategory('seafood')">
+            <img src="./assets/images/banner_seafood.jpg" alt="極鮮海鮮祭，產地直送限量美味" />
+          </div>
+        </div>
+
+        <aside class="featured-box">
+          <div class="featured-header">
+            <h1 class="featured-title">本月精選</h1>
+            <span class="featured-sub">CHEF'S PICK</span>
+          </div>
+          <div class="featured-grid">
+            <div class="featured-tile" onclick="openProductModal('s6dp9jqh3n')">
+              <img src="./assets/images/feat_wagyu.jpg" alt="美國和牛板腱牛排" />
+              <div class="featured-tile-label">美國和牛板腱</div>
+            </div>
+            <div class="featured-tile" onclick="openProductModal('nsmf4xw9c7')">
+              <img src="./assets/images/feat_crab.jpg" alt="五兩級鮮活公蟹" />
+              <div class="featured-tile-label">五兩鮮活公蟹</div>
+            </div>
+            <div class="featured-tile" onclick="openProductModal('fm85as9g5p')">
+              <img src="./assets/images/feat_shrimp.jpg" alt="嚴選特大海虎蝦" />
+              <div class="featured-tile-label">極鮮海虎蝦</div>
+            </div>
+            <div class="featured-tile" onclick="openProductModal('snqdqhqfek')">
+              <img src="./assets/images/feat_salmon.jpg" alt="挪威厚切鮭魚排" />
+              <div class="featured-tile-label">挪威厚切鮭魚</div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- Weekly Top Sellers -->
+      <section class="store-section" id="sec-top">
+        <div class="section-head">
+          <div class="section-title-group">
+            <span class="section-bar"></span>
+            <h2 class="section-title">本週熱銷排行</h2>
+            <span class="section-subtitle">大家都在買</span>
+          </div>
+          <div class="section-controls">
+            <button type="button" class="btn-more" onclick="selectCategory('top')">看更多 →</button>
+            <button type="button" class="carousel-arrow" onclick="scrollRank(-1)" aria-label="向左捲動">‹</button>
+            <button type="button" class="carousel-arrow" onclick="scrollRank(1)" aria-label="向右捲動">›</button>
+          </div>
+        </div>
+        <div class="rank-track" id="rankTrack"></div>
+      </section>
+
+      <!-- Dynamic Category Sections Container -->
+      <div id="categorySections"></div>
+    </div>
+
+    <!-- Category / Search Filter View -->
+    <section id="filterView" class="store-section filter-view">
+      <div class="filter-bar">
+        <div class="section-title-group">
+          <button type="button" class="btn-back-home" onclick="goHome()">← 回首頁</button>
+          <span class="section-bar"></span>
+          <h2 class="section-title" id="filterTitle">全部分類</h2>
+          <span class="section-subtitle" id="filterCount"></span>
+        </div>
+        <div class="filter-sort" id="sortPills">
+          <button type="button" class="sort-pill active" data-sort="default" onclick="setSort('default')">預設推薦</button>
+          <button type="button" class="sort-pill" data-sort="top" onclick="setSort('top')">熱銷優先</button>
+          <button type="button" class="sort-pill" data-sort="asc" onclick="setSort('asc')">價格低→高</button>
+          <button type="button" class="sort-pill" data-sort="desc" onclick="setSort('desc')">價格高→低</button>
+        </div>
+      </div>
+      <div class="product-grid" id="filterGrid"></div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="./assets/logo.svg" alt="Howard0719.tw" class="footer-brand-logo" />
+          <p class="footer-desc">Howard0719 親自把關。台灣在地與進口冷藏、冷凍海鮮肉品，全程低溫冷鏈直送，把產地的新鮮鎖進您家餐桌。</p>
+        </div>
+        <div class="footer-col">
+          <h3>購物指南</h3>
+          <ul class="footer-links">
+            <li><button type="button" onclick="openGuide('how-to-order')">如何訂購</button></li>
+            <li><button type="button" onclick="openGuide('cold-chain')">冷鏈配送說明</button></li>
+            <li><button type="button" onclick="openGuide('free-shipping')">滿額免運規則</button></li>
+            <li><button type="button" onclick="openGuide('returns')">退換貨政策</button></li>
+            <li><button type="button" onclick="openGuide('privacy')">隱私權政策</button></li>
+            <li><button type="button" onclick="openGuide('terms')">服務條款</button></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>品牌服務</h3>
+          <ul class="footer-links">
+            <li><button type="button" onclick="openOrderLookup()">訂單查詢</button></li>
+            <li><button type="button" onclick="openGuide('wholesale')">企業／批發訂購</button></li>
+            <li><button type="button" onclick="openLoginModal()">會員中心</button></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>聯絡我們</h3>
+          <ul class="footer-links">
+            <li><button type="button" onclick="openGuide('line')">LINE @howard0719</button></li>
+            <li><a href="https://howard0719.tw" target="_blank" rel="noopener">IG howard0719.tw</a></li>
+            <li><a href="tel:+886-4-26390719">04-2639-0719</a></li>
+            <li><a href="mailto:service@howard0719.tw">service@howard0719.tw</a></li>
+            <li class="footer-contact-row">客服 週一至週五 09:30–18:00</li>
+            <li class="footer-contact-row">電商 24 小時運作</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Howard0719.tw 版權所有 · Howard0719｜嚴選冷鏈生鮮商城 · 全程冷鏈直送</div>
+        <div class="payment-badges">
+          <span class="pay-badge">VISA</span>
+          <span class="pay-badge">Mastercard</span>
+          <span class="pay-badge">JCB</span>
+          <span class="pay-badge">貨到付款</span>
+          <span class="pay-badge">自取現結</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Bottom Dock -->
+  <div class="mobile-dock" role="navigation" aria-label="行動版底部導覽">
+    <button type="button" class="dock-btn active" id="dockHome" onclick="goHome()">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <span>首頁</span>
+    </button>
+    <button type="button" class="dock-btn" id="dockCat" onclick="selectCategory('all')">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+      <span>全部分類</span>
+    </button>
+    <button type="button" class="dock-btn" id="dockCart" onclick="openCart()">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+      <span id="dockCartBadge" class="dock-badge">0</span>
+      <span>購物車</span>
+    </button>
+    <button type="button" class="dock-btn" id="dockMember" onclick="openLoginModal()">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <span>我的</span>
+    </button>
+  </div>
+
+  <!-- Slide-Over Cart Drawer -->
+  <div id="cartOverlay" class="overlay" onclick="closeCart()"></div>
+  <aside id="cartDrawer" class="cart-drawer" aria-label="購物車">
+    <div class="drawer-head">
+      <h2>🛒 購物車</h2>
+      <button type="button" class="btn-close" onclick="closeCart()" aria-label="關閉購物車">&times;</button>
+    </div>
+    <div class="shipping-bar" id="shippingBar"></div>
+    <div class="drawer-body" id="cartBody"></div>
+    <div class="drawer-foot">
+      <div class="coupon-row">
+        <input id="couponInput" class="coupon-input" type="text" placeholder="輸入折扣碼（試試 HOWARD0719）" />
+        <button type="button" class="btn-coupon" onclick="applyCoupon()">套用</button>
+      </div>
+      <div class="summary-line"><span>商品小計</span><span id="sumSubtotal">NT$0</span></div>
+      <div class="summary-line"><span>低溫冷凍運費</span><span id="sumShipping">NT$0</span></div>
+      <div class="summary-line" id="discountRow" style="display:none;color:#1A7F37;"><span>折扣碼優惠</span><span id="sumDiscount">-NT$0</span></div>
+      <div class="summary-total"><span>應付總計</span><span class="amt" id="sumTotal">NT$0</span></div>
+      <button type="button" id="checkoutBtn" class="btn-primary-full" onclick="openCheckoutModal()">前往結帳</button>
+    </div>
+  </aside>
+
+  <!-- Generic Modal Container -->
+  <div id="modalWrap" class="modal-wrap" onclick="if(event.target===this) closeModal()">
+    <div id="modalBox" class="modal-box" role="dialog" aria-modal="true">
+      <div class="modal-head">
+        <h3 id="modalTitle">商品資訊</h3>
+        <button type="button" class="btn-close" onclick="closeModal()" aria-label="關閉視窗">&times;</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    const CATEGORIES = [
+      { id: 'all',     name: '全部分類', sub: '嚴選全館商品', icon: 'grid' },
+      { id: 'seafood', name: '海鮮類',   sub: '生鮮海產', icon: 'fish' },
+      { id: 'meat',    name: '肉品類',   sub: '火鍋燒烤', icon: 'meat' },
+      { id: 'hotpot',  name: '暖心湯品', sub: '精選鍋底 加熱即食', icon: 'soup' },
+      { id: 'potmix',  name: '鍋物好料', sub: '湯底夥伴 火鍋必備', icon: 'pot' },
+      { id: 'fried',   name: '炸物點心', sub: '炸物系列', icon: 'fried' },
+      { id: 'ready',   name: '退冰即食', sub: '退冰即食 微加熱', icon: 'ready' },
+      { id: 'snack',   name: '嘴饞小點', sub: '人氣點心', icon: 'snack' },
+      { id: 'pantry',  name: '靈魂佐料', sub: '拌飯拌麵 各式沾醬', icon: 'jar' }
+    ];
+
+    const PRODUCTS = [
+      { id: '6p9s06dchs', name: '二去花枝 100/200 隻', origin: '印尼', price: 69, cats: ['seafood'], rank: 1, img: './assets/images/prd_6p9s06dchs.webp', spec: '100-200g／隻（已去皮去內臟）', storage: '-18°C 冷凍保存 12 個月', tip: '解凍後切片川燙、三杯、氣炸或炭烤皆鮮甜彈牙。' },
+      { id: 'vx73391bm3', name: '台灣虱目魚肚・140-160g/包', origin: '台灣', price: 99, cats: ['seafood'], rank: 2, img: './assets/images/prd_vx73391bm3.webp', spec: '140-160g／包（無刺處理）', storage: '-18°C 冷凍保存 12 個月', tip: '乾煎至兩面金黃焦香，撒上胡椒鹽或擠檸檬汁最對味。' },
+      { id: 'r02xjv2kv3', name: '古早味香腸・300g/包', origin: '台灣', price: 99, cats: ['meat', 'snack'], rank: 3, img: './assets/images/prd_r02xjv2kv3.webp', spec: '300g／包（嚴選台灣豬後腿肉）', storage: '-18°C 冷凍保存 6 個月', tip: '氣炸鍋 180°C 約 12 分鐘或小火慢煎，配蒜片超下飯。' },
+      { id: 'sd9y2rmnzs', name: '黑美人草蝦 8P 460g/盒', origin: '越南', price: 160, cats: ['seafood'], rank: 4, img: './assets/images/prd_sd9y2rmnzs.webp', spec: '8 隻／460g／盒（活體急凍）', storage: '-18°C 冷凍保存 12 個月', tip: '流水快速解凍後清蒸、鹽烤或入火鍋，肉質緊實鮮甜。' },
+      { id: '4pjdkfmpc0', name: '極品牛橫膈膜・200g/盒', origin: '美國', price: 230, cats: ['meat'], rank: 5, img: './assets/images/prd_4pjdkfmpc0.webp', spec: '200g／盒（燒肉店人氣首選）', storage: '-18°C 冷凍保存 12 個月', tip: '大火快煎至 5-7 分熟，靜置 2 分鐘切片，肉香濃郁多汁。' },
+      { id: 'zgfgtbnty0', name: '蒲燒鮭魚腹鰭・200g/包', origin: '台灣', price: 149, cats: ['ready', 'seafood'], rank: 6, img: './assets/images/prd_zgfgtbnty0.webp', spec: '200g／包（熟食蒲燒醬汁）', storage: '-18°C 冷凍保存 12 個月', tip: '退冰即食，或微波 90 秒鋪在熱騰騰白飯上秒變日式丼飯。' },
+      { id: '62q3wa2z3b', name: '活凍大草蝦 10P・300g/盒', origin: '馬來西亞', price: 150, cats: ['seafood'], img: './assets/images/prd_62q3wa2z3b.webp', spec: '10 隻／300g／盒', storage: '-18°C 冷凍保存 12 個月', tip: '蝦身飽滿有彈性，適合蒜蓉蒸蝦、胡椒蝦或火鍋川燙。' },
+      { id: 'nsmf4xw9c7', name: '2026 秋蟹季｜五兩級鮮活公蟹・8 隻裝', origin: '江蘇', price: 3199, cats: ['seafood'], img: './assets/images/prd_nsmf4xw9c7.webp', spec: '五兩級公蟹 × 8 隻（季節限定空運）', storage: '冷藏 2-5°C 保存，建議 2 日內食用', tip: '刷洗後腹部朝上墊紫蘇葉大火清蒸 15 分鐘，蟹膏飽滿鮮香。' },
+      { id: 'fm85as9g5p', name: '嚴選特大海虎蝦・350g/盒', origin: '馬來西亞', price: 320, cats: ['seafood'], img: './assets/images/feat_shrimp.jpg', spec: '350g／盒（超大體型船凍）', storage: '-18°C 冷凍保存 12 個月', tip: '肉質媲美龍蝦，開背抹奶油蒜蓉烘烤最能展現甘甜彈牙口感。' },
+      { id: 'snqdqhqfek', name: '挪威極鮮厚切鮭魚排・300g/片', origin: '挪威', price: 249, cats: ['seafood'], img: './assets/images/feat_salmon.jpg', spec: '300g／片（真空單片包裝）', storage: '-18°C 冷凍保存 12 個月', tip: '油脂豐厚細緻，乾煎不需另外放油，撒點海鹽即享星級美味。' },
+      { id: 'mb45xhhgwq', name: '國產黑蜜戰斧豬排 200-500g/塊', origin: '台灣', price: 170, cats: ['meat'], img: './assets/images/prd_mb45xhhgwq.webp', spec: '200-500g／塊（帶骨厚切）', storage: '-18°C 冷凍保存 12 個月', tip: '氣炸 180°C 15 分鐘翻面再 5 分鐘，外酥內嫩超霸氣。' },
+      { id: 't7shaasg7v', name: '特級香腸蒜味/高粱酒 300g/包', origin: '台灣', price: 99, cats: ['meat', 'snack'], img: './assets/images/prd_t7shaasg7v.webp', spec: '300g／包（蒜味／金門高粱雙風味）', storage: '-18°C 冷凍保存 6 個月', tip: '電鍋蒸熟後再煎上色，不爆油又鎖住滿滿肉汁。' },
+      { id: '4a2vakgfqt', name: '澳洲和牛無骨牛小排牛排 160-180g/片', origin: '澳洲', price: 1150, cats: ['meat'], img: './assets/images/prd_4a2vakgfqt.webp', spec: '160-180g／片（大理石油花）', storage: '-18°C 冷凍保存 12 個月', tip: '冷藏退冰後回溫 15 分鐘，鑄鐵鍋高溫雙面各煎 90 秒。' },
+      { id: '6jvjhzxe23', name: '日本和牛(黑樺牛)翼板牛排 160-180g/片', origin: '日本', price: 1390, cats: ['meat'], img: './assets/images/prd_6jvjhzxe23.webp', spec: '160-180g／片（熊本黑樺牛）', storage: '-18°C 冷凍保存 12 個月', tip: '入口即化的雪花脂香，建議 3-5 分熟佐玫瑰鹽與現磨黑胡椒。' },
+      { id: 's6dp9jqh3n', name: '美國和牛(極黑牛)板腱牛排 120-150g/片', origin: '美國', price: 780, cats: ['meat'], img: './assets/images/prd_s6dp9jqh3n.webp', spec: '120-150g／片（SRF 極黑牛）', storage: '-18°C 冷凍保存 12 個月', tip: '兼具和牛油花與美牛濃郁肉味，香煎切條佐蒜片極品享受。' },
+      { id: '6wjtqae021', name: '排骨酥米粉・1500g/袋', origin: '台灣', price: 299, cats: ['hotpot'], img: './assets/images/prd_6wjtqae021.webp', spec: '1500g／袋（約 3-4 人份）', storage: '-18°C 冷凍保存 12 個月', tip: '解凍後倒入鍋中煮沸加入芹菜珠與白胡椒，懷舊古早味立即上桌。' },
+      { id: 'xkmxvweq5d', name: '肉多多羊肉爐・1850g/包', origin: '台灣', price: 599, cats: ['hotpot'], img: './assets/images/prd_xkmxvweq5d.webp', spec: '1850g／包（固形物滿滿帶皮羊肉）', storage: '-18°C 冷凍保存 12 個月', tip: '溫補藥膳湯頭香醇不燥，加入高麗菜、凍豆腐與腐乳醬最過癮。' },
+      { id: '1086xsngkk', name: '肉多多牛肉爐・1200g/包', origin: '台灣', price: 499, cats: ['hotpot'], img: './assets/images/prd_1086xsngkk.webp', spec: '1200g／包（厚切牛腩精燉）', storage: '-18°C 冷凍保存 12 個月', tip: '慢火紅燒濃郁湯底，可加白蘿蔔與手工麵條變身豪華牛肉麵。' },
+      { id: '8afeyybyyz', name: '生食級冷凍熟紅雪蟹切盤・250g/盒', origin: '日本', price: 399, cats: ['potmix', 'ready'], img: './assets/images/prd_8afeyybyyz.webp', spec: '250g／盒（熟凍切盤免剝殼）', storage: '-18°C 冷凍保存 12 個月', tip: '自然解凍即可品嚐清甜蟹肉，或下鍋微涮 15 秒暖胃享用。' },
+      { id: 'dctx41rtwm', name: '宏裕行花枝漿・150g/條', origin: '台灣', price: 129, cats: ['potmix'], img: './assets/images/prd_dctx41rtwm.webp', spec: '150g／條（澎湖新鮮花枝塊）', storage: '-18°C 冷凍保存 12 個月', tip: '每一口都吃得到大塊脆彈花枝，火鍋必備靈魂主角。' },
+      { id: '34rhpvhv7k', name: '澎湖花枝丸・500g/包', origin: '台灣', price: 299, cats: ['potmix', 'fried'], img: './assets/images/prd_34rhpvhv7k.webp', spec: '500g／包（手工拍打）', storage: '-18°C 冷凍保存 12 個月', tip: '煮火鍋、氣炸或油炸至金黃，外酥內Q彈不加多餘澱粉。' },
+      { id: 'hhedrkx12y', name: 'Howard0719 嚴選蔥抓餅 5入／包', origin: '台灣', price: 100, cats: ['fried', 'snack'], img: './assets/images/prd_hhedrkx12y.webp', spec: '5 片／包（宜蘭三星蔥香）', storage: '-18°C 冷凍保存 12 個月', tip: '免解凍直接乾鍋中小火煎至雙面金黃蓬鬆，加顆蛋更美味。' },
+      { id: 'shbf8yjfy1', name: '日本原裝可樂餅・8入/包', origin: '日本', price: 130, cats: ['fried', 'snack'], img: './assets/images/prd_shbf8yjfy1.webp', spec: '8 入／包（北海道綿密馬鈴薯）', storage: '-18°C 冷凍保存 12 個月', tip: '氣炸鍋 190°C 約 10 分鐘，金黃酥脆不油膩，大人小孩都愛。' },
+      { id: 'vqwpz9t1rn', name: '花枝蝦餅・220g/包', origin: '台灣', price: 139, cats: ['fried', 'snack'], img: './assets/images/prd_vqwpz9t1rn.webp', spec: '220g／包（厚實花枝＋鮮蝦仁）', storage: '-18°C 冷凍保存 12 個月', tip: '半煎炸或氣炸 10 分鐘，搭配泰式甜辣醬一口接一口。' },
+      { id: 'y0n339gn57', name: '百花鑲油條・750g/包', origin: '台灣', price: 350, cats: ['fried'], img: './assets/images/prd_y0n339gn57.webp', spec: '750g／包（港式手工蝦漿鑲油條）', storage: '-18°C 冷凍保存 12 個月', tip: '餐廳級功夫菜！氣炸酥脆後淋美乃滋或鳳梨蝦球做法超驚豔。' },
+      { id: 'p7bajs1gxs', name: '深海鮮魚卵・120g/條', origin: '台灣', price: 89, cats: ['fried', 'snack'], img: './assets/images/prd_p7bajs1gxs.webp', spec: '120g／條（已熟真空包裝）', storage: '-18°C 冷凍保存 12 個月', tip: '退冰後小火慢煎至表面微焦切片，搭配美乃滋即成熱炒名菜。' },
+      { id: '9jfbcgm8tk', name: '帶殼熟凍海瓜子 51/60・500g/包', origin: '中國', price: 100, cats: ['ready', 'seafood'], img: './assets/images/prd_9jfbcgm8tk.webp', spec: '500g／包（已吐沙熟凍）', storage: '-18°C 冷凍保存 12 個月', tip: '解凍後加九層塔、蒜末與辣椒大火快炒 2 分鐘，鮮美下酒。' },
+      { id: '462fvw3x5h', name: '辣味干貝醬・120g/罐', origin: '中國', price: 158, cats: ['pantry'], img: './assets/images/prd_462fvw3x5h.webp', spec: '120g／罐（真材實料干貝絲）', storage: '未開封常溫保存，開封後請冷藏', tip: '拌麵、拌飯、炒青菜或當火鍋沾醬，一匙瞬間升級鮮辣層次。' }
+    ];
+
+    const GUIDES = {
+      'how-to-order': { title: '如何訂購', html: '<p>歡迎來到 <strong>Howard0719.tw</strong>！訂購只需 4 步驟：</p><ol style="line-height:2;padding-left:20px;"><li>瀏覽全館分類或使用上方搜尋欄挑選喜愛生鮮。</li><li>點擊商品卡片右下角 <strong>「+」</strong> 快速加入購物車，或點入查看規格與料理建議。</li><li>打開右側購物車確認金額（滿 <strong>NT$2,000</strong> 自動免運），可輸入優惠碼 <code>HOWARD0719</code>。</li><li>選擇付款方式（信用卡／貨到付款／自取現結）送出訂單，系統即時產生訂單編號！</li></ol>' },
+      'cold-chain': { title: '冷鏈配送說明', html: '<p>Howard0719.tw 全站冷凍生鮮商品均委由<strong>黑貓宅急便 -18°C 低溫冷凍專車</strong>配送，確保從倉儲到府上全程不斷鏈。</p><ul style="line-height:1.9;padding-left:20px;"><li>下單付款完成後 1–2 個工作天內依序出貨（例假日與國定假日順延）。</li><li>冷凍運費單筆 NT$220，單筆消費滿 <strong>NT$2,000 即享免運優惠</strong>。</li><li>收貨後請立即開箱清點並置入 -18°C 冷凍庫保存。</li></ul>' },
+      'free-shipping': { title: '滿額免運規則', html: '<p>本館冷凍商品單筆結帳金額（折扣後）滿 <strong>NT$2,000</strong>，系統將自動減免 NT$220 低溫宅配運費。</p><p style="color:#5C5953;">※ 外島地區（澎湖、金門、馬祖）因空運冷鏈成本差異，運費另計，詳情請洽 LINE 客服 <strong>@howard0719</strong>。</p>' },
+      'returns': { title: '退換貨政策', html: '<p>依據消費者保護法規定，生鮮冷凍食品屬易於腐敗之保存期限較短商品，不適用七日無條件退貨鑑賞期。</p><p>若商品於運送過程中發生<strong>失溫解凍、包裝破損或品項寄錯</strong>，請於收貨後 <strong>24 小時內</strong>拍照並聯繫客服專線 04-2639-0719 或 LINE @howard0719，我們將立即為您補寄或退款處理。</p>' },
+      'privacy': { title: '隱私權政策', html: '<p>Howard0719.tw 嚴格遵守個人資料保護法規範，您於本網站填寫之姓名、電話、配送地址與訂單資料僅供出貨配送、售後服務及會員權益通知使用，絕不對無關第三方揭露或販售。</p>' },
+      'terms': { title: '服務條款', html: '<p>當您使用 Howard0719.tw 進行瀏覽與消費時，即表示您已閱讀並同意本商城之交易規範、冷鏈配送說明與退換貨政策。如有任何疑問歡迎於服務時間聯繫我們。</p>' },
+      'wholesale': { title: '企業／批發訂購', html: '<p>歡迎餐飲業者、團購主、企業福委會與節慶禮盒採購洽詢專案報價！</p><p><strong>專屬窗口：</strong><br>Email：service@howard0719.tw<br>電話：04-2639-0719（週一至週五 09:30–18:00）<br>LINE 官方帳號：@howard0719</p>' },
+      'line': { title: 'LINE 官方客服 @howard0719', html: '<div style="text-align:center;padding:8px 0;"><div style="display:inline-flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:16px;background:#06C755;color:#FFF;font-size:24px;font-weight:800;margin-bottom:12px;">LINE</div><p style="font-size:16px;font-weight:800;margin:0 0 6px;">官方帳號：@howard0719</p><p style="color:#5C5953;font-size:13.5px;margin:0 0 16px;">週一至週五 09:30–18:00 專人線上為您服務<br>直播開播提醒、隱藏折扣碼與團購專案一手掌握</p><button type="button" class="btn-solid" style="padding:0 24px;" onclick="copyText(\'@howard0719\')">一鍵複製 LINE ID</button></div>' }
+    };
+
+    const FREE_SHIPPING_THRESHOLD = 2000;
+    const SHIPPING_FEE = 220;
+
+    let cart = JSON.parse(localStorage.getItem('howard0719_cart') || '[]');
+    let orders = JSON.parse(localStorage.getItem('howard0719_orders') || '[]');
+    let member = JSON.parse(localStorage.getItem('howard0719_member') || 'null');
+    let activeCategory = 'home';
+    let activeSearch = '';
+    let activeSort = 'default';
+    let appliedDiscount = 0;
+
+    function fmt(n) { return 'NT$' + Number(n).toLocaleString('zh-TW'); }
+
+    function catIconSvg(type) {
+      const m = {
+        grid: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>',
+        fish: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.47-3.44 6-7 6s-7.56-2.53-8.5-6Z"/><path d="M18 12v.5"/><path d="M2 8.5 6 12l-4 3.5V8.5Z"/></svg>',
+        meat: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"/><circle cx="14" cy="10" r="2.2"/></svg>',
+        soup: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18a8 8 0 0 1-16 0Z"/><path d="M8 7V5m4 2V4m4 3V5"/></svg>',
+        pot: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11h16v4a6 6 0 0 1-6 6h-4a6 6 0 0 1-6-6v-4Z"/><path d="M2 11h20"/><path d="M9 7h6"/></svg>',
+        fried: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4m6.36 1.64-2.83 2.83M20 12h-4M5.64 7.64l2.83 2.83M4 12h4"/><circle cx="12" cy="15" r="5"/></svg>',
+        ready: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>',
+        snack: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l2.6 5.3 5.9.8-4.2 4.1 1 5.8L12 16.2 6.7 19l1-5.8-4.2-4.1 5.9-.8L12 3z"/></svg>',
+        jar: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="6" width="12" height="15" rx="3"/><path d="M8 6V3h8v3"/></svg>'
+      };
+      return m[type] || '';
+    }
+
+    function pinSvg() {
+      return '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>';
+    }
+
+    function productCardHtml(p, showRank = false) {
+      let badge = '';
+      if (showRank && p.rank) {
+        const cls = p.rank <= 3 ? `rank-${p.rank}` : 'rank-other';
+        badge = `<span class="rank-badge ${cls}">${p.rank}</span>`;
+      }
+      return `
+        <article class="product-card" onclick="openProductModal('${p.id}')">
+          <div class="product-thumb">
+            ${badge}
+            <img src="${p.img}" alt="${p.name}" loading="lazy" />
+          </div>
+          <div class="product-origin">${pinSvg()}<span>${p.origin}</span></div>
+          <h3 class="product-name">${p.name}</h3>
+          <div class="product-bottom">
+            <span class="product-price">${fmt(p.price)}</span>
+            <button type="button" class="btn-quick-add" onclick="event.stopPropagation(); addToCart('${p.id}', 1)" aria-label="加入 ${p.name} 到購物車">+</button>
+          </div>
+        </article>
+      `;
+    }
+
+    function renderNav() {
+      const nav = document.getElementById('catNavBar');
+      nav.innerHTML = CATEGORIES.map(c => `
+        <button type="button" class="cat-tab ${activeCategory === c.id ? 'active' : ''}" data-cat="${c.id}" onclick="selectCategory('${c.id}')">
+          ${c.id === 'all' ? catIconSvg('grid') : ''}
+          <span>${c.name}</span>
+        </button>
+      `).join('');
+    }
+
+    function renderHome() {
+      // Weekly top sellers
+      const topProducts = PRODUCTS.filter(p => p.rank).sort((a, b) => a.rank - b.rank);
+      document.getElementById('rankTrack').innerHTML = topProducts.map(p => productCardHtml(p, true)).join('');
+
+      // Category sections (skip 'all' and 'snack' if empty, show all populated categories)
+      const homeCats = ['seafood', 'meat', 'hotpot', 'potmix', 'fried', 'ready', 'pantry'];
+      const container = document.getElementById('categorySections');
+      container.innerHTML = homeCats.map(catId => {
+        const cat = CATEGORIES.find(c => c.id === catId);
+        const list = PRODUCTS.filter(p => p.cats.includes(catId)).slice(0, 5);
+        return `
+          <section class="store-section" id="sec-${cat.id}">
+            <div class="section-head">
+              <div class="section-title-group">
+                <span class="section-bar"></span>
+                <span class="section-icon">${catIconSvg(cat.icon)}</span>
+                <h2 class="section-title">${cat.name}</h2>
+                <span class="section-subtitle">${cat.sub}</span>
+              </div>
+              <div class="section-controls">
+                <button type="button" class="btn-more" onclick="selectCategory('${cat.id}')">看更多 →</button>
+              </div>
+            </div>
+            <div class="product-grid">
+              ${list.map(p => productCardHtml(p, false)).join('')}
+            </div>
+          </section>
+        `;
+      }).join('');
+    }
+
+    function scrollRank(dir) {
+      const track = document.getElementById('rankTrack');
+      track.scrollBy({ left: dir * 320, behavior: 'smooth' });
+    }
+
+    function selectCategory(catId) {
+      activeCategory = catId;
+      activeSearch = '';
+      document.getElementById('searchInput').value = '';
+      document.getElementById('searchClear').classList.remove('visible');
+      document.getElementById('searchDropdown').classList.remove('open');
+      renderNav();
+      showFilterView();
+      window.scrollTo(0, 0);
+    }
+
+    function goHome() {
+      activeCategory = 'home';
+      activeSearch = '';
+      document.getElementById('searchInput').value = '';
+      document.getElementById('searchClear').classList.remove('visible');
+      document.getElementById('searchDropdown').classList.remove('open');
+      document.getElementById('homeView').style.display = 'block';
+      document.getElementById('filterView').classList.remove('active');
+      renderNav();
+      setDockActive('dockHome');
+      window.scrollTo(0, 0);
+    }
+
+    function setDockActive(id) {
+      document.querySelectorAll('.dock-btn').forEach(b => b.classList.remove('active'));
+      const el = document.getElementById(id);
+      if (el) el.classList.add('active');
+    }
+
+    function setSort(sortKey) {
+      activeSort = sortKey;
+      document.querySelectorAll('.sort-pill').forEach(p => {
+        p.classList.toggle('active', p.dataset.sort === sortKey);
+      });
+      showFilterView();
+    }
+
+    function showFilterView() {
+      document.getElementById('homeView').style.display = 'none';
+      document.getElementById('filterView').classList.add('active');
+      setDockActive('dockCat');
+
+      let items = [...PRODUCTS];
+      let title = '全館嚴選商品';
+
+      if (activeSearch) {
+        const q = activeSearch.toLowerCase();
+        items = items.filter(p =>
+          p.name.toLowerCase().includes(q) ||
+          p.origin.toLowerCase().includes(q) ||
+          p.spec.toLowerCase().includes(q)
+        );
+        title = `搜尋「${activeSearch}」`;
+      } else if (activeCategory === 'top') {
+        items = items.filter(p => p.rank).sort((a, b) => a.rank - b.rank);
+        title = '本週熱銷排行';
+      } else if (activeCategory !== 'all' && activeCategory !== 'home') {
+        const cat = CATEGORIES.find(c => c.id === activeCategory);
+        items = items.filter(p => p.cats.includes(activeCategory));
+        title = cat ? cat.name : '分類商品';
+      }
+
+      if (activeSort === 'top') {
+        items.sort((a, b) => (a.rank || 99) - (b.rank || 99));
+      } else if (activeSort === 'asc') {
+        items.sort((a, b) => a.price - b.price);
+      } else if (activeSort === 'desc') {
+        items.sort((a, b) => b.price - a.price);
+      }
+
+      document.getElementById('filterTitle').textContent = title;
+      document.getElementById('filterCount').textContent = `共 ${items.length} 項商品`;
+
+      const grid = document.getElementById('filterGrid');
+      if (!items.length) {
+        grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:48px 16px;color:#8A867E;">找不到符合「${activeSearch}」的商品，試試搜尋「和牛」、「草蝦」或「羊肉爐」吧！</div>`;
+      } else {
+        grid.innerHTML = items.map(p => productCardHtml(p, activeCategory === 'top')).join('');
+      }
+    }
+
+    /* ── Live Search ── */
+    const searchInput = document.getElementById('searchInput');
+    const searchDropdown = document.getElementById('searchDropdown');
+    const searchClear = document.getElementById('searchClear');
+
+    searchInput.addEventListener('input', () => {
+      const val = searchInput.value.trim();
+      searchClear.classList.toggle('visible', val.length > 0);
+      if (!val) {
+        searchDropdown.classList.remove('open');
+        return;
+      }
+      const q = val.toLowerCase();
+      const matches = PRODUCTS.filter(p =>
+        p.name.toLowerCase().includes(q) || p.origin.toLowerCase().includes(q)
+      ).slice(0, 6);
+
+      if (!matches.length) {
+        searchDropdown.innerHTML = `<div style="padding:14px 16px;font-size:13px;color:#8A867E;">查無符合「${val}」的商品</div>`;
+      } else {
+        searchDropdown.innerHTML = matches.map(p => `
+          <div class="search-item" onclick="openProductModal('${p.id}'); searchDropdown.classList.remove('open');">
+            <img src="${p.img}" alt="${p.name}" />
+            <div class="search-item-info">
+              <div class="search-item-name">${p.name}</div>
+              <div class="search-item-meta">產地：${p.origin}</div>
+            </div>
+            <div class="search-item-price">${fmt(p.price)}</div>
+          </div>
+        `).join('');
+      }
+      searchDropdown.classList.add('open');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.search-wrap')) searchDropdown.classList.remove('open');
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if ((e.key === '/' || (e.key === 'k' && (e.metaKey || e.ctrlKey))) && document.activeElement !== searchInput) {
+        e.preventDefault();
+        searchInput.focus();
+      }
+      if (e.key === 'Escape') {
+        closeModal();
+        closeCart();
+        searchDropdown.classList.remove('open');
+      }
+    });
+
+    function handleSearchSubmit(e) {
+      e.preventDefault();
+      const val = searchInput.value.trim();
+      searchDropdown.classList.remove('open');
+      if (!val) { goHome(); return; }
+      activeSearch = val;
+      activeCategory = 'all';
+      renderNav();
+      showFilterView();
+    }
+
+    function clearSearch() {
+      searchInput.value = '';
+      searchClear.classList.remove('visible');
+      searchDropdown.classList.remove('open');
+      if (activeSearch) goHome();
+    }
+
+    /* ── Cart Logic ── */
+    function saveCart() {
+      localStorage.setItem('howard0719_cart', JSON.stringify(cart));
+      renderCartUI();
+    }
+
+    function addToCart(productId, qty = 1) {
+      const p = PRODUCTS.find(x => x.id === productId);
+      if (!p) return;
+      const existing = cart.find(x => x.id === productId);
+      if (existing) existing.qty += qty;
+      else cart.push({ id: productId, qty });
+      saveCart();
+      showToast(`已加入購物車：${p.name}`);
+    }
+
+    function updateQty(productId, delta) {
+      const item = cart.find(x => x.id === productId);
+      if (!item) return;
+      item.qty += delta;
+      if (item.qty <= 0) cart = cart.filter(x => x.id !== productId);
+      saveCart();
+    }
+
+    function removeFromCart(productId) {
+      cart = cart.filter(x => x.id !== productId);
+      saveCart();
+    }
+
+    function getCartTotals() {
+      let subtotal = 0;
+      let count = 0;
+      cart.forEach(item => {
+        const p = PRODUCTS.find(x => x.id === item.id);
+        if (p) {
+          subtotal += p.price * item.qty;
+          count += item.qty;
+        }
+      });
+      const discount = subtotal > 0 ? Math.min(appliedDiscount, subtotal) : 0;
+      const afterDiscount = subtotal - discount;
+      const shipping = (subtotal === 0 || afterDiscount >= FREE_SHIPPING_THRESHOLD) ? 0 : SHIPPING_FEE;
+      const total = afterDiscount + shipping;
+      return { subtotal, count, discount, shipping, total, remain: Math.max(0, FREE_SHIPPING_THRESHOLD - afterDiscount) };
+    }
+
+    function renderCartUI() {
+      const t = getCartTotals();
+      const badge = document.getElementById('cartBadge');
+      const dockBadge = document.getElementById('dockCartBadge');
+      badge.textContent = t.count;
+      dockBadge.textContent = t.count;
+      badge.classList.toggle('visible', t.count > 0);
+      dockBadge.classList.toggle('visible', t.count > 0);
+
+      // Shipping progress bar
+      const pct = Math.min(100, Math.round(((FREE_SHIPPING_THRESHOLD - t.remain) / FREE_SHIPPING_THRESHOLD) * 100));
+      document.getElementById('shippingBar').innerHTML = t.subtotal === 0
+        ? `<div>冷凍商品滿 <strong>NT$2,000</strong> 即享免運優惠</div><div class="shipping-progress-track"><div class="shipping-progress-fill" style="width:0%"></div></div>`
+        : t.remain > 0
+          ? `<div>再買 <strong style="color:#A63A24;">${fmt(t.remain)}</strong> 即可享冷凍免運！</div><div class="shipping-progress-track"><div class="shipping-progress-fill" style="width:${pct}%"></div></div>`
+          : `<div style="color:#1A7F37;font-weight:700;">🎉 恭喜！已達 NT$2,000 冷凍免運門檻</div><div class="shipping-progress-track"><div class="shipping-progress-fill" style="width:100%"></div></div>`;
+
+      const body = document.getElementById('cartBody');
+      if (!cart.length) {
+        body.innerHTML = `<div class="cart-empty"><div style="font-size:40px;margin-bottom:8px;">🛒</div><div style="font-weight:700;color:#181818;margin-bottom:4px;">購物車目前是空的</div><div style="font-size:13px;">快來挑選 Howard0719.tw 嚴選冷鏈生鮮吧！</div></div>`;
+      } else {
+        body.innerHTML = cart.map(item => {
+          const p = PRODUCTS.find(x => x.id === item.id);
+          if (!p) return '';
+          return `
+            <div class="cart-item">
+              <img src="${p.img}" alt="${p.name}" />
+              <div class="cart-item-body">
+                <div class="cart-item-title">${p.name}</div>
+                <div class="cart-item-price">${fmt(p.price)}</div>
+                <div class="qty-row">
+                  <div class="qty-stepper">
+                    <button type="button" onclick="updateQty('${p.id}', -1)" aria-label="減少數量">−</button>
+                    <span>${item.qty}</span>
+                    <button type="button" onclick="updateQty('${p.id}', 1)" aria-label="增加數量">+</button>
+                  </div>
+                  <button type="button" class="btn-remove" onclick="removeFromCart('${p.id}')">移除</button>
+                </div>
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+
+      document.getElementById('sumSubtotal').textContent = fmt(t.subtotal);
+      document.getElementById('sumShipping').textContent = t.shipping === 0 ? '免運' : fmt(t.shipping);
+      document.getElementById('discountRow').style.display = t.discount > 0 ? 'flex' : 'none';
+      document.getElementById('sumDiscount').textContent = '-' + fmt(t.discount);
+      document.getElementById('sumTotal').textContent = fmt(t.total);
+      document.getElementById('checkoutBtn').disabled = cart.length === 0;
+    }
+
+    function applyCoupon() {
+      const code = document.getElementById('couponInput').value.trim().toUpperCase();
+      if (code === 'HOWARD0719' || code === 'VIP100') {
+        appliedDiscount = 100;
+        renderCartUI();
+        showToast('優惠碼套用成功！現折 NT$100');
+      } else {
+        showToast('無效的折扣碼，請輸入 HOWARD0719');
+      }
+    }
+
+    function openCart() {
+      renderCartUI();
+      document.getElementById('cartOverlay').classList.add('open');
+      document.getElementById('cartDrawer').classList.add('open');
+    }
+    function closeCart() {
+      document.getElementById('cartOverlay').classList.remove('open');
+      document.getElementById('cartDrawer').classList.remove('open');
+    }
+
+    /* ── Modals ── */
+    function openModal(title, html, narrow = false) {
+      document.getElementById('modalTitle').textContent = title;
+      document.getElementById('modalBody').innerHTML = html;
+      document.getElementById('modalBox').classList.toggle('narrow', narrow);
+      document.getElementById('modalWrap').classList.add('open');
+    }
+    function closeModal() {
+      document.getElementById('modalWrap').classList.remove('open');
+    }
+
+    let modalQty = 1;
+    function openProductModal(id) {
+      const p = PRODUCTS.find(x => x.id === id);
+      if (!p) return;
+      modalQty = 1;
+      const catNames = p.cats.map(cid => CATEGORIES.find(c => c.id === cid)?.name).filter(Boolean);
+      openModal('商品詳情', `
+        <div class="product-modal-grid">
+          <img class="product-modal-img" src="${p.img}" alt="${p.name}" />
+          <div>
+            <div class="pm-tags">
+              <span class="pm-tag">產地：${p.origin}</span>
+              <span class="pm-tag cold">❄️ -18°C 低溫冷鏈</span>
+              ${catNames.map(n => `<span class="pm-tag">${n}</span>`).join('')}
+            </div>
+            <h2 class="pm-title">${p.name}</h2>
+            <div class="pm-price">${fmt(p.price)}</div>
+            <div class="pm-specs">
+              <div><strong>商品規格：</strong>${p.spec}</div>
+              <div><strong>保存方式：</strong>${p.storage}</div>
+              <div><strong>主廚建議：</strong>${p.tip}</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;">
+              <span style="font-size:13.5px;font-weight:700;">數量</span>
+              <div class="qty-stepper">
+                <button type="button" onclick="changeModalQty(-1)">−</button>
+                <span id="modalQtyVal">1</span>
+                <button type="button" onclick="changeModalQty(1)">+</button>
+              </div>
+            </div>
+            <div class="pm-actions">
+              <button type="button" class="btn-outline" onclick="addToCart('${p.id}', modalQty); closeModal();">加入購物車</button>
+              <button type="button" class="btn-solid" onclick="addToCart('${p.id}', modalQty); closeModal(); openCart();">立即結帳</button>
+            </div>
+          </div>
+        </div>
+      `, false);
+    }
+
+    function changeModalQty(d) {
+      modalQty = Math.max(1, modalQty + d);
+      const el = document.getElementById('modalQtyVal');
+      if (el) el.textContent = modalQty;
+    }
+
+    let selectedPay = '信用卡 (VISA / Master / JCB)';
+    function openCheckoutModal() {
+      closeCart();
+      const t = getCartTotals();
+      selectedPay = '信用卡 (VISA / Master / JCB)';
+      openModal('填寫配送與付款資訊', `
+        <form onsubmit="submitOrder(event)">
+          <div style="background:#FAF8F4;padding:12px 14px;border-radius:10px;margin-bottom:16px;font-size:13.5px;">
+            共 <strong>${t.count}</strong> 件商品｜運費 <strong>${t.shipping === 0 ? '免運' : fmt(t.shipping)}</strong>｜應付總額 <strong style="color:#A63A24;font-size:16px;">${fmt(t.total)}</strong>
+          </div>
+          <div class="form-group">
+            <label for="coName">收件人姓名</label>
+            <input id="coName" class="form-control" required placeholder="請輸入真實姓名" value="${member ? member.name : ''}" />
+          </div>
+          <div class="form-group">
+            <label for="coPhone">聯絡手機</label>
+            <input id="coPhone" class="form-control" required type="tel" placeholder="09xx-xxx-xxx" value="${member ? member.phone : ''}" />
+          </div>
+          <div class="form-group">
+            <label for="coAddr">低溫冷凍收件地址</label>
+            <input id="coAddr" class="form-control" required placeholder="縣市 / 鄉鎮區 / 路街號樓" />
+          </div>
+          <div class="form-group">
+            <label>付款方式</label>
+            <div class="pay-options">
+              <div class="pay-opt selected" onclick="pickPay(this, '信用卡 (VISA / Master / JCB)')">信用卡</div>
+              <div class="pay-opt" onclick="pickPay(this, '黑貓貨到付款')">貨到付款</div>
+              <div class="pay-opt" onclick="pickPay(this, '台中門市自取現結')">自取現結</div>
+            </div>
+          </div>
+          <button type="submit" class="btn-primary-full">確認送出訂單（${fmt(t.total)}）</button>
+        </form>
+      `, true);
+    }
+
+    function pickPay(el, method) {
+      selectedPay = method;
+      document.querySelectorAll('.pay-opt').forEach(x => x.classList.remove('selected'));
+      el.classList.add('selected');
+    }
+
+    function submitOrder(e) {
+      e.preventDefault();
+      const t = getCartTotals();
+      const orderId = 'HW' + new Date().toISOString().slice(0,10).replace(/-/g,'') + Math.floor(1000 + Math.random()*9000);
+      const order = {
+        id: orderId,
+        name: document.getElementById('coName').value.trim(),
+        phone: document.getElementById('coPhone').value.trim(),
+        addr: document.getElementById('coAddr').value.trim(),
+        pay: selectedPay,
+        total: t.total,
+        count: t.count,
+        items: cart.map(i => ({ ...i, name: PRODUCTS.find(p => p.id === i.id)?.name || '' })),
+        createdAt: new Date().toLocaleString('zh-TW')
+      };
+      orders.unshift(order);
+      localStorage.setItem('howard0719_orders', JSON.stringify(orders));
+      cart = [];
+      appliedDiscount = 0;
+      saveCart();
+
+      openModal('訂單已成立', `
+        <div style="text-align:center;padding:8px 0 14px;">
+          <div style="font-size:44px;margin-bottom:6px;">✅</div>
+          <h3 style="margin:0 0 6px;font-size:20px;">感謝您的訂購！</h3>
+          <p style="margin:0;color:#5C5953;font-size:13.5px;">Howard0719.tw 已收到您的低溫生鮮訂單，將儘速安排冷鏈出貨。</p>
+        </div>
+        <div class="order-card">
+          <div><strong>訂單編號：</strong><span style="color:#A63A24;font-weight:800;">${order.id}</span></div>
+          <div><strong>收件人：</strong>${order.name}（${order.phone}）</div>
+          <div><strong>配送地址：</strong>${order.addr}</div>
+          <div><strong>付款方式：</strong>${order.pay}</div>
+          <div><strong>結帳總計：</strong>${fmt(order.total)}（共 ${order.count} 件）</div>
+          <div class="order-steps">
+            <div class="order-step done">訂單成立</div>
+            <div class="order-step done">低溫揀貨</div>
+            <div class="order-step">冷鏈配送</div>
+            <div class="order-step">已送達</div>
+          </div>
+        </div>
+        <button type="button" class="btn-primary-full" onclick="closeModal()">繼續逛逛</button>
+      `, true);
+    }
+
+    function openOrderLookup() {
+      const recentHtml = orders.length
+        ? `<div style="margin-top:16px;font-size:13px;font-weight:700;color:#5C5953;">您最近的本機訂單：</div>` +
+          orders.slice(0, 3).map(o => `
+            <div class="order-card" style="font-size:13px;">
+              <div style="display:flex;justify-content:space-between;"><strong>${o.id}</strong><span style="color:#A63A24;font-weight:700;">${fmt(o.total)}</span></div>
+              <div style="color:#5C5953;margin-top:4px;">${o.createdAt} · ${o.pay}</div>
+              <div class="order-steps">
+                <div class="order-step done">訂單成立</div>
+                <div class="order-step done">低溫揀貨</div>
+                <div class="order-step">冷鏈配送</div>
+                <div class="order-step">已送達</div>
+              </div>
+            </div>
+          `).join('')
+        : `<p style="font-size:13px;color:#8A867E;margin-top:14px;">目前尚無本機下單紀錄。下單後即可在此即時追蹤冷鏈配送狀態。</p>`;
+
+      openModal('訂單查詢', `
+        <form onsubmit="lookupOrder(event)">
+          <div class="form-group">
+            <label for="lookupInput">輸入訂單編號或訂購手機號碼</label>
+            <input id="lookupInput" class="form-control" placeholder="例如：HW20261123xxxx 或 09xxxxxxxx" required />
+          </div>
+          <button type="submit" class="btn-primary-full" style="margin-top:4px;">查詢訂單進度</button>
+        </form>
+        <div id="lookupResult">${recentHtml}</div>
+      `, true);
+    }
+
+    function lookupOrder(e) {
+      e.preventDefault();
+      const q = document.getElementById('lookupInput').value.trim().toLowerCase();
+      const found = orders.find(o => o.id.toLowerCase() === q || o.phone.replace(/-/g,'').includes(q.replace(/-/g,'')));
+      const res = document.getElementById('lookupResult');
+      if (found) {
+        res.innerHTML = `
+          <div class="order-card">
+            <div><strong>訂單編號：</strong><span style="color:#A63A24;font-weight:800;">${found.id}</span></div>
+            <div><strong>收件人：</strong>${found.name}（${found.phone}）</div>
+            <div><strong>金額：</strong>${fmt(found.total)} · ${found.pay}</div>
+            <div><strong>下單時間：</strong>${found.createdAt}</div>
+            <div class="order-steps">
+              <div class="order-step done">訂單成立</div>
+              <div class="order-step done">低溫揀貨</div>
+              <div class="order-step">冷鏈配送</div>
+              <div class="order-step">已送達</div>
+            </div>
+          </div>`;
+      } else {
+        res.innerHTML = `<div class="order-card" style="color:#A63A24;">查無此訂單編號或手機號碼，請確認後再試，或聯繫 LINE 客服 @howard0719。</div>`;
+      }
+    }
+
+    function openLoginModal() {
+      if (member) {
+        openModal('會員中心', `
+          <div style="text-align:center;padding:8px 0 14px;">
+            <img src="./assets/logo.svg" alt="會員頭像" style="width:64px;height:64px;margin:0 auto 10px;" />
+            <h3 style="margin:0 0 4px;">${member.name}</h3>
+            <div style="font-size:13px;color:#5C5953;">${member.phone} · Howard0719 尊榮會員</div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;">
+            <button type="button" class="btn-outline" onclick="openOrderLookup()">查看我的訂單 (${orders.length})</button>
+            <button type="button" class="btn-outline" onclick="logoutMember()">登出帳號</button>
+          </div>
+        `, true);
+        return;
+      }
+      openModal('登入 / 註冊 Howard0719.tw 會員', `
+        <form onsubmit="submitLogin(event)">
+          <div class="form-group">
+            <label for="memName">會員稱呼</label>
+            <input id="memName" class="form-control" required placeholder="請輸入您的姓名或暱稱" />
+          </div>
+          <div class="form-group">
+            <label for="memPhone">手機號碼</label>
+            <input id="memPhone" class="form-control" required type="tel" placeholder="09xx-xxx-xxx" />
+          </div>
+          <button type="submit" class="btn-primary-full" style="margin-top:4px;">登入 / 快速註冊</button>
+          <p style="font-size:12px;color:#8A867E;text-align:center;margin:12px 0 0;">登入後自動帶入收件資訊並享有會員專屬折扣碼 <strong>HOWARD0719</strong></p>
+        </form>
+      `, true);
+    }
+
+    function submitLogin(e) {
+      e.preventDefault();
+      member = {
+        name: document.getElementById('memName').value.trim(),
+        phone: document.getElementById('memPhone').value.trim()
+      };
+      localStorage.setItem('howard0719_member', JSON.stringify(member));
+      updateMemberUI();
+      closeModal();
+      showToast(`歡迎回來，${member.name}！`);
+    }
+
+    function logoutMember() {
+      member = null;
+      localStorage.removeItem('howard0719_member');
+      updateMemberUI();
+      closeModal();
+      showToast('已安全登出會員帳號');
+    }
+
+    function updateMemberUI() {
+      document.getElementById('headerLoginLabel').textContent = member ? member.name : '登入 / 註冊';
+    }
+
+    function openGuide(key) {
+      const g = GUIDES[key];
+      if (!g) return;
+      openModal(g.title, `<div style="font-size:14px;line-height:1.8;color:#333;">${g.html}</div>`, true);
+    }
+
+    function copyText(txt) {
+      if (navigator.clipboard) navigator.clipboard.writeText(txt).catch(() => {});
+      showToast(`已複製：${txt}`);
+    }
+
+    let toastTimer;
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.textContent = msg;
+      t.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => t.classList.remove('show'), 2400);
+    }
+
+    /* ── Boot ── */
+    renderNav();
+    renderHome();
+    renderCartUI();
+    updateMemberUI();
+
+    if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+      navigator.serviceWorker.register('./sw.js').catch(() => {});
+    }
+  </script>
+</body>
+</html>
